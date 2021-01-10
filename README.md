@@ -1,2 +1,3 @@
 # thewaiter
-Created with CodeSandbox
+
+Simple MVP of app which helps ordering inside a restaurant.
