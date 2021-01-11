@@ -14,12 +14,12 @@ import {
 import { loadState } from './redux/localStorage';
 
 const Orders = () => {
-  const [orders, setOrders] = useState(loadState().orders);
+  const [orders, setOrders] = useState(loadState()?.orders || {});
   const orderList = [];
   useEffect(() => {
     const interval = setInterval(() => {
       // states are different in different tabs, so there is a need to load from localStorage manually
-      setOrders(loadState().orders);
+      setOrders(loadState()?.orders || {});
     }, 1000);
     return () => {
       clearInterval(interval);
@@ -57,7 +57,7 @@ const Orders = () => {
     <Container maxWidth='xs'>
       <h1>Orders</h1>
       <Grid container direction='column' spacing={3}>
-        {orderList}
+        {orderList.length ? orderList : <Grid item>{'No orders'}</Grid>}
       </Grid>
     </Container>
   );
