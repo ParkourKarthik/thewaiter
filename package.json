@@ -4,6 +4,7 @@
   "description": "App to order from menu items",
   "keywords": [],
   "main": "src/index.js",
+  "license": "MIT",
   "dependencies": {
     "@material-ui/core": "4.11.2",
     "@material-ui/icons": "4.11.2",

@@ -1,0 +1,7 @@
+spec:
+  name: thewaiter
+  static_sites:
+    - git:
+        branch: main
+        repo_clone_url: https://github.com/ParkourKarthik/thewaiter.git
+      name: thewaiter
