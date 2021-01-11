@@ -11,7 +11,8 @@ store.subscribe(
   throttle(() => {
     saveState({
       tables: store.getState().tables,
-      orders: store.getState().orders
+      orders: store.getState().orders,
+      menus: store.getState().menus
     });
   }, 1000)
 );
